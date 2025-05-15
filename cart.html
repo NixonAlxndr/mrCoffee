@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Coffee</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/Logo.png">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+    <nav class="navbar inter-400">
+        <div class="inner-navbar">
+            <li class="option ease-anim"><a href="Reward.html">Reward</a></li>
+            <li class="option ease-anim"><a href="About.html">About</a></li>
+            <li class="playwrite-dk-loopet-400 shop-name"><a href="index.html">Mr.Coffee</a></li>
+            <li class="option ease-anim"><a href="shop.html">Shop</a></li>
+            <li class="option ease-anim"><a href="cart.html" class="cart">Cart</a></li>
+        </div>
+    </nav>
+
+    <main class="max-screen">
+        <div class="payment">
+            <div class="left-side">
+                <div class="total">
+                    <p class="title-6 inter-400 color-gray">Total Payment</p>
+                    <p class="title-4 nunito-600">$ <span class="total-payment">0</span></p>
+                </div>
+
+                <div class="list-item">
+                    <!-- <div class="item">
+                        <div class="item-desc">
+                            <div class="img">
+                                <img src="./assets/images/Croissants.jpg" alt="">
+                            </div>
+
+                            <div class="desc">
+                                <p class="desc-2 nunito-600">Title</p>
+                                <p class="desc-3 color-gray nunito-400">Qty <span>1</span></p>
+                            </div>
+                        </div>
+
+                        <div class="cost-desc">
+                            <p class="total-cost desc-2 nunito-600">$<span>25</span></p>
+                            <p class="item-cost desc-3 color-gray nunito-400">$<span>1</span> each</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="form">
+                    <p class="title-4 form-title nunito-400">Please Fill This Form <br/> Before Pay Your Order</p>
+                    
+                    <div class="form-input form-name">
+                        <label class="name desc-3 inter-400">Name</label>
+                        <input class="nunito-400 input-name" data-validation="#name" type="text">
+                        <p class="inter-400 text-danger validation desc-3" id="name"></p>
+                    </div>
+
+                    <div class="form-input form-address">
+                        <label class="address desc-3 inter-400">Address</label>
+                        <input class="nunito-400 input-address" data-validation="#address" type="text">
+                        <p class="inter-400 text-danger validation desc-3" id="address"></p>
+                    </div>
+
+                    <div class="form-input form-email">
+                        <label class="email desc-3 inter-400">Email</label>
+                        <input class="nunito-400 input-email" data-validation="#email" type="text">
+                        <p class="inter-400 text-danger validation desc-3" id="email"></p>
+                    </div>
+                </div>
+                <div class="card-payment">
+                    <button class="main-button-3 disable nunito-600 pay-button"> <span class="">Pay</span></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script src="./js/cart.js" defer></script>
+
+</html>
