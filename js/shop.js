@@ -1,6 +1,26 @@
 const menuContainer = document.querySelector(".render-menu")
-const categoryOption = document.querySelectorAll(".menu-option .option")
+const categoryOption = document.querySelectorAll(".menu-option .option, .menu-option-2 .option")
 const cartLink = document.querySelector(".cart")
+const harmburgerButton = document.querySelector(".hamburger-button")
+const overlay = document.querySelector(".overlay")
+const cancelButton = document.querySelector(".cancel-button")
+const categoryButton = document.querySelector(".menu-option-2 .hamburger-button")
+const categoryList = document.querySelector(".category-list")
+
+// Toggle category list
+categoryButton.addEventListener("click", () => {
+    categoryList.classList.toggle("active-category")
+})
+
+// Toggle Overlay On Mobile Device
+harmburgerButton.addEventListener("click", () => {
+    overlay.classList.remove("not-displaying")
+})
+
+cancelButton.addEventListener("click", () => {
+    overlay.classList.add("not-displaying")
+})
+
 // --------------- Menu Page ----------------
 
 // Ambil item dari local storage
@@ -9,6 +29,7 @@ const cart = JSON.parse(localStorage.getItem("cart")) || []
 // Toggle Cart Pin
 const toggleCartPin = () => {
     cart.length > 0 ? cartLink.classList.add("active") : cartLink.classList.remove("active")
+    console.log(cartLink.classList)
 }
 toggleCartPin()
 

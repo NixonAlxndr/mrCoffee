@@ -137,7 +137,8 @@ nav {
 }
 
 .inner-navbar{
-    width: 40%;
+    width: 90%;
+    max-width: 600px;
     margin-inline: auto;
     display: flex;
     padding-block: 10px;
@@ -390,4 +391,140 @@ nav .active::after{
 
 .text-danger{
     color: red;
+}
+
+.hamburger-button{
+    width: 2em;
+    height: 2em;
+}
+
+.cancel-button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 2em;
+    height: 2em;   
+}
+
+.not-displaying{
+    display: none;
+}
+
+.overlay{
+    /* pointer-events: none; */
+    z-index: 100;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);   
+}
+
+.overlay .overlay-option li a{
+    color: white;
+    font-size: 2em;
+    padding-left: 5px;
+}
+
+.overlay .overlay-option li{
+    border-bottom: 4px solid white;
+    margin-top: 10px;
+}
+
+.overlay li.option-1{
+    width: 40%;
+}
+
+.overlay li.option-2{
+    width: 50%;
+}
+
+.overlay li.option-3{
+    width: 60%;
+}
+
+.overlay li.option-4{
+    width: 70%;
+}
+
+.overlay li.option-5{
+    width: 80%;
+}
+
+/* Tablet Media Queries */
+@media only screen and (width <= 850px){
+    /* Payment */
+    .payment{
+        grid-template-columns: none;
+        grid-template-rows: 400px 1fr;
+    }
+
+    /* Global CSS */
+    .title{
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .title-2{
+        font-size: 2.5rem;
+    }
+
+    .title-3{
+        font-size: 2rem;
+    }
+
+    .title-4{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+    }
+
+    .desc-2{
+        font-size: 1rem;
+    }
+
+    .desc-3{
+        font-size: 1rem;
+    }
+}
+
+/* Phone Media Queries */
+@media only screen and (width <= 500px){
+    nav .nav-option{
+        display: none;
+    }
+
+    nav .inner-navbar .not-displaying{
+        display: block;
+    }
+
+    /* Global CSS */
+    .title{
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .title-2{
+        font-size: 2rem;
+    }
+
+    .title-3{
+        font-size: 1.5rem;
+    }
+
+    .title-4{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+    }
+
+    .desc-2{
+        font-size: 1rem;
+    }
+
+    .desc-3{
+        font-size: 1rem;
+    }
 }

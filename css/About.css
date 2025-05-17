@@ -132,7 +132,8 @@ nav {
 }
 
 .inner-navbar{
-    width: 40%;
+    width: 90%;
+    max-width: 600px;
     margin-inline: auto;
     display: flex;
     padding-block: 10px;
@@ -170,31 +171,24 @@ section.history-section{
 
 .parent {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px 250px 250px 0px 0px;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-.div1{
-    grid-column: span 2;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
-.div2{
-    grid-row: span 2 ;
+.div1, .div4{
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.div3{
-    grid-row: 2 / 3;
+
+.history-section .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-.div4{
-    grid-column: 2/4;
-}
-
-.img{
-    width: 500px;
-    height: 500px;
-}
 
 .text{
     padding-top: 2em;
@@ -221,6 +215,7 @@ main.outlet section{
 
 /* Founder Section */
 main.founder-section{
+    padding-inline: 1em;
     margin-top: 7em;
 }
 
@@ -339,7 +334,9 @@ footer{
 }
 
 footer .tree-img{
+    overflow: hidden;
     width: 50%;
+    min-width: 300px;
     justify-self: center;
 }
 
@@ -524,4 +521,202 @@ nav .active::after{
     border-radius: 100%;
     content: '';
     background-color: red;
+}
+
+.hamburger-button{
+    width: 2em;
+    height: 2em;
+}
+
+.cancel-button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 2em;
+    height: 2em;   
+}
+
+.not-displaying{
+    display: none;
+}
+
+.overlay{
+    /* pointer-events: none; */
+    z-index: 100;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);   
+}
+
+.overlay .overlay-option li a{
+    color: white;
+    font-size: 2em;
+    padding-left: 5px;
+}
+
+.overlay .overlay-option li{
+    border-bottom: 4px solid white;
+    margin-top: 10px;
+}
+
+.overlay li.option-1{
+    width: 40%;
+}
+
+.overlay li.option-2{
+    width: 50%;
+}
+
+.overlay li.option-3{
+    width: 60%;
+}
+
+.overlay li.option-4{
+    width: 70%;
+}
+
+.overlay li.option-5{
+    width: 80%;
+}
+
+/* Tablet Media Queries */
+@media only screen and (width <= 850px){
+    /* History Section */
+    .parent {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .text-history-2{
+        padding-left: 0;
+    }
+
+    .div1,
+    .div2,
+    .div3,
+    .div4 {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100%;
+    }
+
+    .img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Founder Section */
+    .main-founder-section{
+        grid-template-columns: none;
+        gap: 1em;
+        grid-template-rows: auto;
+    }
+    
+    /* Vision Mission Section */
+    main.vision-mission{
+        margin-top: 4em;
+    }
+
+    main.vision-mission .box{
+        width: 70%;
+    }
+
+    .vision-mission-main{
+        gap: 2em;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .text-history-1{
+        padding-right: 0px;
+    }
+
+    /* Global CSS */
+    .title{
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .title-2{
+        font-size: 2.5rem;
+    }
+
+    .title-3{
+        font-size: 2rem;
+    }
+
+    .title-4{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+    }
+
+    .desc-2{
+        font-size: 1rem;
+    }
+
+    .desc-3{
+        font-size: 1rem;
+    }
+}
+
+/* Phone Media Queries */
+@media only screen and (width <= 500px){
+    nav .nav-option{
+        display: none;
+    }
+
+    nav .inner-navbar .not-displaying{
+        display: block;
+    }
+
+    /* History Section */
+    section.history-section .parent{
+        text-align: center;
+    }
+
+    /* Outlet */
+    main.outlet section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Footer */
+    footer .tree-img{
+        width: 90%;
+    }
+
+    /* Global CSS */
+    .title{
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .title-2{
+        font-size: 2rem;
+    }
+
+    .title-3{
+        font-size: 1.5rem;
+    }
+
+    .title-4{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+    }
+
+    .desc-2{
+        font-size: 1rem;
+    }
+
+    .desc-3{
+        font-size: 1rem;
+    }
 }

@@ -43,7 +43,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
 /* CSS Reset */
 *, *::before, *::after {
@@ -100,17 +100,6 @@ a{
     color: black;
 }
 
-/* Hide Scroll bar */
-body {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    overflow: auto;
-}
-
-body::-webkit-scrollbar {
-    display: none; 
-}
-
 /* Nav Bar */
 nav {
     background: white;
@@ -145,7 +134,8 @@ nav {
 }
 
 .inner-navbar{
-    width: 40%;
+    width: 90%;
+    max-width: 600px;
     margin-inline: auto;
     display: flex;
     padding-block: 10px;
@@ -162,7 +152,7 @@ section.hero{
     align-items: center;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 500px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .cta-button{
@@ -172,7 +162,9 @@ section.hero{
 }
 
 .hero-images{
-    width: 100%;
+    width: 80%;
+    min-width: 250px;
+    justify-self: center;
 }
 
 /* Favourite Menu */
@@ -182,13 +174,14 @@ section.favourite-menu{
 
 section.favourite-menu .favourite{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-inline: auto;
     margin-top: 2em;
 }
 
 section.favourite-menu .menu{
-    width: 150px;
+    width: 200px;
     margin-inline: 1em;
     justify-items: center;
 }
@@ -209,10 +202,6 @@ section.favourite-menu .desc-3{
     text-align: center;
 }
 
-section.favourite-menu .menu.active{
-    width: 200px;
-}
-
 section.favourite-menu .active .img{
     width: 200px;
 }
@@ -225,7 +214,7 @@ section.ceo-section{
 section.ceo-section .ceo{
     margin-top: 2em;
     display: grid;
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 section.ceo-section .img{
@@ -284,6 +273,7 @@ section.reward-section .img-reward{
 }
 
 .hidden{
+    pointer-events: none;
     opacity: 0;
     transform: translateY(20px);
     transition: all .2s ease-in-out;
@@ -384,4 +374,183 @@ nav .active::after{
     border-radius: 100%;
     content: '';
     background-color: red;
+}
+
+.hamburger-button{
+    width: 2em;
+    height: 2em;
+}
+
+.cancel-button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 2em;
+    height: 2em;   
+}
+
+.not-displaying{
+    display: none;
+}
+
+.overlay{
+    /* pointer-events: none; */
+    z-index: 100;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);   
+}
+
+.overlay .overlay-option li a{
+    color: white;
+    font-size: 2em;
+    padding-left: 5px;
+}
+
+.overlay .overlay-option li{
+    border-bottom: 4px solid white;
+    margin-top: 10px;
+}
+
+.overlay li.option-1{
+    width: 40%;
+}
+
+.overlay li.option-2{
+    width: 50%;
+}
+
+.overlay li.option-3{
+    width: 60%;
+}
+
+.overlay li.option-4{
+    width: 70%;
+}
+
+.overlay li.option-5{
+    width: 80%;
+}
+
+/* Tablet Media Queries */
+@media only screen and (width <= 850px){
+
+    /* Hero Section */
+    section.hero{
+        height: auto;
+        grid-template-columns: none;
+        grid-template-rows: .5fr 1fr;
+        padding-top: 5em;
+    }
+    
+    section.hero .left-side{
+        justify-items: center;
+        text-align: center;
+    }
+    
+    section.hero .hero-images{
+        width: 50%;
+    }
+    
+    /* About Us Section */
+    section.ceo-section .ceo{
+        grid-template-columns: none;
+        grid-template-rows: 1fr .5fr;
+    }
+
+    section.ceo-section .text{
+        width: 90%;
+    }
+
+    section.ceo-section .cta-button{
+        justify-content: center;
+    }
+
+    /* Reward Section */
+    section.reward-section .reward{
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+
+    section.reward-section .title{
+        width: 90%;
+    }
+
+    section.reward-section .img-reward{
+        width: 200px;
+        height: 250px;
+    }
+
+    /* Global CSS */
+    .title{
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .title-2{
+        font-size: 2.5rem;
+    }
+
+    .title-3{
+        font-size: 2rem;
+    }
+
+    .title-4{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+    }
+
+    .desc-2{
+        font-size: 1rem;
+    }
+
+    .desc-3{
+        font-size: 1rem;
+    }
+}
+
+/* Phone Media Queries */
+@media only screen and (width <= 500px){
+    nav .nav-option{
+        display: none;
+    }
+
+    nav .inner-navbar .not-displaying{
+        display: block;
+    }
+
+    /* Global CSS */
+    .title{
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .title-2{
+        font-size: 2rem;
+    }
+
+    .title-3{
+        font-size: 1.5rem;
+    }
+
+    .title-4{
+        font-size: 1rem;
+    }
+
+    .desc{
+        font-size: 1rem;
+    }
+
+    .desc-2{
+        font-size: 1rem;
+    }
+
+    .desc-3{
+        font-size: 1rem;
+    }
 }

@@ -6,6 +6,19 @@ const inputField = document.querySelectorAll("input")
 const inputEmail = document.querySelector(".input-email")
 const inputName = document.querySelector(".input-name")
 const validation = document.querySelectorAll(".validation")
+const harmburgerButton = document.querySelector(".hamburger-button")
+const overlay = document.querySelector(".overlay")
+const cancelButton = document.querySelector(".cancel-button")
+
+// Toggle Overlay On Mobile Device
+harmburgerButton.addEventListener("click", () => {
+    overlay.classList.remove("not-displaying")
+})
+
+cancelButton.addEventListener("click", () => {
+    overlay.classList.add("not-displaying")
+})
+
 
 // ----------------------- Cart Page --------------------------
 // Ambil item dari local storage
