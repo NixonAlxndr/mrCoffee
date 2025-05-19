@@ -29,7 +29,7 @@ mainMenuImg.forEach(img => {
 
 // Navigation
 shopBtn.addEventListener('click', () => {
-    window.location.href = '/shop.html'
+    window.location.href = 'shop.html'
 })
 
 // Toggle Overlay On Mobile Device
