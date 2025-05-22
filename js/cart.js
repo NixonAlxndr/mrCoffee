@@ -102,17 +102,6 @@ const inputValidation = () => {
     return isValid;
 };
 
-
-// Enable Button
-const checkAllInputFilled = () => {
-    const allFilled = [...inputField].every(input => input.value.trim() !== '');
-    payButton.classList.toggle("disable", !allFilled);
-};
-
-inputField.forEach(input => {
-    input.addEventListener("input", checkAllInputFilled);
-});
-
 // Pay Button
 payButton.addEventListener("click", e => {
     e.preventDefault();
@@ -121,7 +110,8 @@ payButton.addEventListener("click", e => {
 
     if (valid) {
         console.log("Form submitted!");
-        // Lanjut ke pembayaran
+        localStorage.clear("cart")
+        location.reload()
     } else {
         console.log("Form invalid. Please fix the errors.");
     }

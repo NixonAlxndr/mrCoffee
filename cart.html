@@ -66,30 +66,44 @@
             </div>
 
             <div class="right-side">
-                <div class="form">
-                    <p class="title-4 form-title nunito-400">Please Fill This Form <br/> Before Pay Your Order</p>
-                    
-                    <div class="form-input form-name">
-                        <label class="name desc-3 inter-400">Name</label>
-                        <input class="nunito-400 input-name" data-validation="#name" type="text">
-                        <p class="inter-400 text-danger validation desc-3" id="name"></p>
-                    </div>
+                <form action="">
+                    <div class="form">
+                        <p class="title-4 form-title nunito-400">Please Fill This Form <br/> Before Pay Your Order</p>
+                        
+                        <div class="form-input form-name">
+                            <label class="name desc-3 inter-400">Name</label>
+                            <input class="nunito-400 input-name" data-validation="#name" type="text">
+                            <p class="inter-400 text-danger validation desc-3" id="name"></p>
+                        </div>
+    
+                        <div class="form-input form-address">
+                            <label class="address desc-3 inter-400">Address</label>
+                            <input class="nunito-400 input-address" data-validation="#address" type="text">
+                            <p class="inter-400 text-danger validation desc-3" id="address"></p>
+                        </div>
+    
+                        <div class="form-input form-email">
+                            <label class="email desc-3 inter-400">Email</label>
+                            <input class="nunito-400 input-email" data-validation="#email" type="text">
+                            <p class="inter-400 text-danger validation desc-3" id="email"></p>
+                        </div>
 
-                    <div class="form-input form-address">
-                        <label class="address desc-3 inter-400">Address</label>
-                        <input class="nunito-400 input-address" data-validation="#address" type="text">
-                        <p class="inter-400 text-danger validation desc-3" id="address"></p>
-                    </div>
+                        <div class="form-input form-phone">
+                            <label class="phone desc-3 inter-400">Phone Number</label>
+                            <input type="number" data-validation="#phone" class="nunito-400 input-phone">
+                            <p class="inter-400 text-danger validation desc-3" id="phone"></p>
+                        </div>
 
-                    <div class="form-input form-email">
-                        <label class="email desc-3 inter-400">Email</label>
-                        <input class="nunito-400 input-email" data-validation="#email" type="text">
-                        <p class="inter-400 text-danger validation desc-3" id="email"></p>
+                        <div class="form-input form-bod">
+                            <label class="bod desc-3 inter-400">Birthdate</label>
+                            <input type="date" data-validation="#bod" class="nunito-400 input-bod">
+                            <p class="inter-400 text-danger validation desc-3" id="bod"></p>
+                        </div>
                     </div>
-                </div>
-                <div class="card-payment">
-                    <button class="main-button-3 disable nunito-600 pay-button"> <span class="">Pay</span></button>
-                </div>
+                    <div class="card-payment">
+                        <button class="main-button-3 nunito-600 pay-button"> <span class="">Pay</span></button>
+                    </div>
+                </form>
             </div>
         </div>
     </main>

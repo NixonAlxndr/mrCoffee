@@ -201,6 +201,7 @@ main{
 .right-side{
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 .card-payment{
@@ -454,7 +455,12 @@ nav .active::after{
     /* Payment */
     .payment{
         grid-template-columns: none;
-        grid-template-rows: 400px 1fr;
+        grid-template-rows: 300px 1fr;
+    }
+
+    .right-side{
+        border-top: 1px solid black;
+        padding-top: 3em;
     }
 
     /* Global CSS */
